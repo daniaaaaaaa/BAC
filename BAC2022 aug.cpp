@@ -30,3 +30,23 @@ III.1
   st=n/e;
   n=(st/10*10+x)*e+dr;
 }
+
+//MADALIN
+void schimb(int &n, int p, int x){
+    int k = 0, p1 = 1, nr = n, nrn = 0;
+    while(nr != 0){
+        if(k == p){
+            n = n / p1;
+            n = (n/10)*10 + x;
+            n = n * p1 + nrn;
+            break;
+        }
+        else{
+            nrn = (nr % 10) * p1 + nrn;
+        }
+        k++;
+        nr = nr / 10;
+        p1 = p1 * 10;
+    }
+    
+}
